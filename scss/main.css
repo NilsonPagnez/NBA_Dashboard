@@ -1,0 +1,60 @@
+.container {
+  max-width: 170rem;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: aliceblue;
+}
+
+html {
+  background-image: url(../image/bg.jpg);
+  background-size: cover;
+  font-size: 62.5%;
+}
+
+body {
+  max-height: 100vh;
+  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+body header {
+  height: 13vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body header .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+body header .container img {
+  height: 80%;
+}
+body main {
+  display: flex;
+}
+body main aside {
+  height: 87vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+body main aside .teamChoise {
+  display: flex;
+  flex-direction: column;
+  padding: 0 6rem 0 3rem;
+}
+body main aside .teamChoise img {
+  max-width: 8rem;
+  margin: 2.5rem 0rem;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
