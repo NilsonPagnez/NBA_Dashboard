@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+@font-face {
+  font-family: BasketBall;
+  src: url(../Basketball.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +15,38 @@
   text-decoration: none;
   box-sizing: border-box;
   color: aliceblue;
+  font-family: BasketBall, Georgia, "Times New Roman", Times, serif;
+  font-size: 2.4rem;
 }
 
 html {
   background-image: url(../image/bg.jpg);
   background-size: cover;
   font-size: 62.5%;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #4a4a4a #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #5c5b5b;
+  border-radius: 6px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #4a4a4a;
 }
 
 body {
@@ -39,6 +69,24 @@ body header .container {
 }
 body header .container img {
   height: 80%;
+  -webkit-animation: SwipeFormLeft 0.7s ease-in-out;
+          animation: SwipeFormLeft 0.7s ease-in-out;
+}
+body header .container #headerTeamName {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+}
+body header .container .statsInfo {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  height: 20%;
+  width: 100%;
+}
+body header .container .statsInfo li {
+  display: flex;
 }
 body main {
   display: flex;
@@ -47,14 +95,46 @@ body main aside {
   height: 87vh;
   overflow: hidden;
   overflow-y: scroll;
+  width: 15%;
+  display: flex;
+  justify-content: center;
 }
 body main aside .teamChoise {
   display: flex;
   flex-direction: column;
-  padding: 0 6rem 0 3rem;
 }
 body main aside .teamChoise img {
   max-width: 8rem;
   margin: 2.5rem 0rem;
   cursor: pointer;
+}
+body main .dashboard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+body main .dashboard .statsGraph {
+  display: flex;
+  justify-content: space-around;
+  height: 80%;
+}
+body main .dashboard .statsGraph .winLooseGraph {
+  max-width: 450px;
+  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  body main {
+    flex-direction: column;
+  }
+  body main aside {
+    padding: 0;
+    height: 17vh;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  body main aside .teamChoise {
+    flex-direction: row;
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

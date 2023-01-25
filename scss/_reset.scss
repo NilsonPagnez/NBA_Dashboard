@@ -1,3 +1,8 @@
+@font-face {
+    font-family: BasketBall;
+    src: url(../Basketball.otf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +10,8 @@
     text-decoration: none;
     box-sizing: border-box;
     color: aliceblue;
+    font-family: BasketBall , Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.4rem;
     
 }
 html{
@@ -12,3 +19,27 @@ html{
     background-size: cover;
     font-size: 62.5%;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #4a4a4a #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #5c5b5b;
+    border-radius: 6px;
+    &:hover{
+        background-color: #4a4a4a;
+    }
+  }

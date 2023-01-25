@@ -12,13 +12,34 @@ body{
 
         background-color:rgba($color: #000000, $alpha: 0.5);
         .container{
-        
+            
             display: flex;
             align-items: center;
+            
             height: 100%;
             img{
                height: 80%;
-                
+               animation: SwipeFormLeft 0.7s ease-in-out;
+            }
+
+            
+           
+            #headerTeamName{
+                width: 100%;
+                text-align: center;
+                font-size: 4rem;
+            }
+            .statsInfo{
+                display: none;
+                align-items: center;
+                justify-content: center;
+                gap: 10%;
+                height: 20%;
+                width: 100%;
+                li{
+                    display: flex;
+                    
+                }
             }
         }
     }
@@ -29,11 +50,16 @@ body{
         height: 87vh;
         overflow: hidden;
         overflow-y: scroll;
+        width: 15%;
+        display: flex;
+        justify-content: center;
+
         
+
         .teamChoise{
             display: flex;
             flex-direction: column;
-            padding: 0 6rem 0 3rem;
+            
             
             img{
                 max-width: 8rem;
@@ -42,8 +68,41 @@ body{
             }
         }
       }
+      .dashboard{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    
+        .statsGraph{
+            display: flex;
+            justify-content: space-around;
+            height: 80%;
+            .winLooseGraph{
+                max-width: 450px;
+                overflow: hidden;
+            }
+        }
+      }
+    }
+    @media (max-width: 1200px) {
+        main{
+            flex-direction: column;
+            aside{
+                padding: 0;
+                height:17vh;
+                width: 100%;
+                overflow-x: scroll;
+                .teamChoise{
+                    flex-direction: row;
+                    width: 100%;
+                }
+            }
+            .dashboard{
+                
+                .statsGraph{}
+            }
+        }
     }
 }
-::-webkit-scrollbar{
- 
-}
+

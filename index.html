@@ -11,7 +11,15 @@
 <body>
     <header >
         <div class="container">
-            <img src="image/NBA-logo-png.png" alt="">
+            <img src="image/nba-logo.png" alt="">
+            
+            <span id="headerTeamName">
+                
+            </span>
+            <ul class="statsInfo">
+                <li> GAMES </li><span class="js-stats-totalGames" ></span></li>
+                <li class="js-stats-totalPlayers"></li>
+            </ul>
         </div>
     </header>
     <main class="container">
@@ -22,14 +30,19 @@
         </aside>
         <div class="dashboard"> 
 
-            <ul class="statsInfo">
-                
-            </ul>
+           
             <ul class="statsGraph">
-    
+                <div class="winLooseGraph">
+
+                </div>
+                <div class="BarGraph">
+
+                </div>
             </ul>
         </div>
     </main>
+    
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
