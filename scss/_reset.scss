@@ -11,7 +11,7 @@
     box-sizing: border-box;
     color: aliceblue;
     font-family: BasketBall , Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.4rem;
+    font-size: 2rem;
     
 }
 html{
@@ -29,7 +29,7 @@ html{
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 12px;
+    width: 1.2rem;
   }
 
   *::-webkit-scrollbar-track {
@@ -37,9 +37,13 @@ html{
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #5c5b5b;
-    border-radius: 6px;
+    background: rgba(0,107,182,0.50155812324929976);
+    border-radius: 0.6rem;
+    border: 1px double #252525 ;
+    
     &:hover{
-        background-color: #4a4a4a;
+        background-color: #252525;
     }
+
+   
   }

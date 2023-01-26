@@ -1,16 +1,17 @@
 
 
 body{
-    max-height: 100vh;
+    min-height: 100vh;
     height: 100%;
     height: fit-content;
-    background-color:rgba($color: #000000, $alpha: 0.5);
+    background: linear-gradient(90deg, rgba(0,107,182,0.30155812324929976) 0%, rgba(237,23,76,0.2987570028011205) 100%);
+
     overflow: hidden;
    
     header{
         height:13vh ;
-
-        background-color:rgba($color: #000000, $alpha: 0.5);
+        
+        background: linear-gradient(90deg, rgba(12,34,48,0.8105217086834734) 0%, rgba(65,28,37,0.8077205882352942) 100%);
         .container{
             
             display: flex;
@@ -19,7 +20,7 @@ body{
             height: 100%;
             img{
                height: 80%;
-               animation: SwipeFormLeft 0.7s ease-in-out;
+               
             }
 
             
@@ -60,11 +61,21 @@ body{
             display: flex;
             flex-direction: column;
             
-            
+            .active{
+                scale: 1.2;
+                filter: drop-shadow(0px 0px 10px #FFFFFF);
+
+            }
             img{
                 max-width: 8rem;
-                margin:2.5rem  0rem;
+                margin:2.5rem  2.5rem;
                 cursor: pointer;
+                transition: 0.2s ease;
+                &:hover{
+                    scale: 1.2;
+                    transition: 0.2s ease;
+                }
+                
             }
         }
       }
@@ -78,8 +89,12 @@ body{
             display: flex;
             justify-content: space-around;
             height: 80%;
+            
             .winLooseGraph{
-                max-width: 450px;
+                max-width: 45rem;
+                overflow: hidden;
+            }
+            .BarGraph{
                 overflow: hidden;
             }
         }
@@ -98,9 +113,38 @@ body{
                     width: 100%;
                 }
             }
+            
+        }
+    }
+    @media (max-width: 900px) {
+        overflow: visible;
+        header{
+            .statsInfo{
+                width: 0 !important;
+                li{
+                    font-size: 0;
+                }
+                span{
+                    display: none;
+                }
+            }
+        }
+        main{
             .dashboard{
-                
-                .statsGraph{}
+                .statsGraph{
+                    flex-direction: column;
+                    align-items: center;
+                    overflow: hidden;
+                    .winLooseGraph{
+                        
+                        overflow: hidden;
+                    }
+                    .BarGraph{
+                        overflow: hidden;
+                        
+                        scale: 0.8;
+                    }
+                }
             }
         }
     }
